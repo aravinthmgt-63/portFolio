@@ -2,7 +2,7 @@ body{
   color:white;
   margin:0;
   padding:0 90px;
-  background-image: linear-gradient(to bottom, rgb(255, 0, 255),rgb(2, 0, 128));
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0),rgb(2, 0, 128));
   font-family: 'poppins',sans-serif;
   margin-bottom: 50vh;
 }
@@ -25,7 +25,7 @@ nav{
   font-size: 50px;
 }
 .name span{
-  color:rgb(7, 7, 7);
+  color:rgb(250, 4, 4);
 }
 nav ul li{
   display: inline-block;
@@ -40,7 +40,7 @@ nav ul li a{
     font-weight: bold;
 }
 nav ul li a:hover{
-  color: rgb(8, 8, 8);
+  color: rgb(247, 5, 5);
 }
 nav ul li a::after{
   content:'';
@@ -49,7 +49,7 @@ nav ul li a::after{
   width:0%;
   left:0;
   bottom:-5px;
-  background: rgb(7, 7, 7);
+  background: rgb(255, 255, 255);
   transition: 1s width ease;
 }
 nav ul li a:hover::after{
