@@ -3,199 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Aravinth – Web Developer</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- 
 </head>
 <body>
+
+  <!-- NAV -->
   <div class="header">
-    <div class="contain">
-       <nav>
-        <h1 class="name"><span>A</span>ravinth.</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-       </nav>
-    </div>
+    <nav>
+      <h1 class="name"><span>A</span>ravinth.</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
   </div>
 
-  <div id="home">
-    <div class="container">
-      <div class="info">
-        <h2>Web Developer</h2>
-        <h1>Hi, I'm <span>Aravinth</span> <br>From Chennai</h1>
-       </div>
-       <img src="image.jpg" class="user-img">
-    </div>
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#work" onclick="closeMenu()">Portfolio</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 
-  <div id="about">
-    <div class="contanier">
-      <div class="row">
-        <div class="row-1">
-          <img src="image.jpg">
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Available for Freelance</div>
+        <h1>Hi, I'm <span class="highlight">Aravinth</span><br>Web Developer</h1>
+        <p>Aspiring web developer from Chennai, passionate about building responsive, user-friendly digital experiences with modern web technologies.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
         </div>
-        <div class="row-2">
-          <h1>About Me</h1>
-          <p class="about-me">My name is Aravinth T, and I am an aspiring web developer currently pursuing my B.E. in Computer Science and Engineering at Sri Sairam Institute of Technology, Chennai. I have a strong passion for designing and developing responsive, user-friendly websites using modern web technologies. I enjoy learning new tools and frameworks, working on real-time projects, and continuously improving my problem-solving skills. My goal is to become a skilled and creative web developer who builds efficient, scalable, and impactful digital solutions</p>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="profile.png" alt="Aravinth" class="user-img">
+      </div>
+    </div>
+  </section>
 
-          <div class="tab-titles">
-            <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-              <li><span>Web Development</span><br>Web app Development</li>
-              <li><span>Cloud</span><br>Cloud web technologies</li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>Intern</span><br>Internship at UBA</li>
-              <li><span>1st Clone</span><br>Amazon Clone</li>
-              <li><span>2nd Clone</span><br>Netflix Homepage</li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2022</span><br>10th standard <span>436/500</span></li>
-              <li><span>2023</span><br>11th standard <span>522/600</span></li>
-              <li><span>2024</span><br>12th standard <span>517/600</span></li>
-            </ul>
-          </div>         
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Get to Know Me</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-divider"></div>
+    <div class="about-grid">
+      <div class="about-img-col">
+        <img src="profile.png" alt="Aravinth">
+      </div>
+      <div>
+        <p class="about-bio">My name is Aravinth T, and I am an aspiring web developer currently pursuing my B.E. in Computer Science and Engineering at Sri Sairam Institute of Technology, Chennai. I have a strong passion for designing and developing responsive, user-friendly websites using modern web technologies. I enjoy learning new tools and frameworks, working on real-time projects, and continuously improving my problem-solving skills. My goal is to become a skilled and creative web developer who builds efficient, scalable, and impactful digital solutions.</p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX Design</span>Designing intuitive Web & App interfaces</li>
+            <li><span>Web Development</span>Building responsive web applications</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>Intern</span>Internship at UBA</li>
+            <li><span>1st Clone</span>Amazon Clone</li>
+            <li><span>2nd Clone</span>Netflix HomePage</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2022</span>10th Standard — <strong>436/500</strong></li>
+            <li><span>2023</span>11th Standard — <strong>522/600</strong></li>
+            <li><span>2024</span>12th Standard — <strong>517/600</strong></li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!--Services-->
+  <!-- SERVICES -->
   <div id="services">
-    <div class="contaier">
-      <h1 class="sub-title">My Services</h1>
-      <div class="service-list">
-        <div class="list">
-          <i class='bx  bxl-visual-studio'></i> 
+    <section style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">My Services</h2>
+      <div class="section-divider"></div>
+      <div class="service-grid">
+        <div class="service-card">
+          <i class='bx bxl-visual-studio'></i>
           <h2>Web Design</h2>
-          <p>I provide clean, responsive, and user-friendly web design services tailored to client needs. My focus is on modern layouts, smooth navigation, and compatibility across all devices to ensure a strong online presence and good user experience.</p>
+          <p>Clean, responsive, and user-friendly web design services tailored to client needs. Modern layouts, smooth navigation, and cross-device compatibility.</p>
           <a href="#">Learn more</a>
         </div>
-        <div class="list">
-          <i class='bx bx-crop'></i> 
+        <div class="service-card">
+          <i class='bx bx-crop'></i>
           <h2>UI/UX Design</h2>
-          <p>I provide intuitive and user-centered UI/UX design services focused on creating visually appealing interfaces and smooth user experiences. My goal is to design easy-to-use, engaging, and efficient digital products that enhance user satisfaction.</p>
+          <p>Intuitive, user-centered design services focused on creating visually appealing interfaces and smooth user experiences that enhance satisfaction.</p>
           <a href="#">Learn more</a>
         </div>
-        <div class="list">
-          <i class='bx  bx-mobile'></i> 
-          <h2>Mobile Responsive Design</h2>
-          <p>I design fully responsive websites that adapt seamlessly to all screen sizes, ensuring an optimal viewing and interaction experience on mobile phones, tablets, and desktops.</p>
-          <a href="#">Learn more</a>          
+        <div class="service-card">
+          <i class='bx bx-mobile'></i>
+          <h2>Mobile Responsive</h2>
+          <p>Fully responsive websites that adapt seamlessly to all screen sizes — from mobile phones and tablets to desktops.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="section-label">Case Studies</div>
+    <h2 class="section-title">My Work</h2>
+    <div class="section-divider"></div>
+    <div class="work-grid">
+      <div class="work-card">
+        <img src="netflix.png" alt="Netflix Clone">
+        <div class="work-overlay">
+          <h3>Netflix HomePage Clone</h3>
+          <a href="https://netflix-clone-aravinth.vercel.app/" target="_blank" class="work-link"><i class='bx bx-link'></i></a>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="amazon.png" class="amazon">
+        <div class="work-overlay">
+          <h3>Amazon Clone</h3>
+          <a href="https://amazonclone-aravinth63.vercel.app/" class="work-link"><i class='bx bx-link'></i></a>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="calculator.png" alt="Calculator">
+        <div class="work-overlay">
+          <h3>Calculator</h3>
+          <a href="#" class="work-link"><i class='bx bx-link'></i></a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
- <!-- -------my work-------- -->
-  <div id="work">
-    <h1>My Work</h1>
-    <div class="container">
-      <div class="work">
-        <div class="work-list">
-          <img src="netflix.png">
-          <div class="layer">
-            <h3>Netflix HomePage Clone</h3>
-            <a href="https://netflix-clone-aravinth.vercel.app/"><i class='bx  bx-link'></i></a> 
-          </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Let's Talk</div>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get in touch &<br>let's build something.</h2>
+        <div class="contact-detail">
+          <i class='bx bx-paper-plane'></i>
+          <span>sit24cs034@sairamtap.edu.in</span>
         </div>
-        <div class="work-list">
-          <img src="temp.png">
-          <div class="layer">
-            <h3>Temperature Convertor</h3>
-            <a href="https://temperature-converter-aravinth.vercel.app"><i class='bx  bx-link'></i> </a>
-          </div>
+        <div class="contact-detail">
+          <i class='bx bx-phone'></i>
+          <span>9944596744</span>
         </div>
-        <div class="work-list">
-          <img src="image.png">
-          <div class="layer">
-            <h3>Amazon Clone</h3>
-            <a href="https://amazonclone-aravinth63.vercel.app/"><i class='bx  bx-link'></i> </a>
-          </div>
+        <div class="social-row">
+          <a class="social-icon" href="#"><i class='bx bxl-twitter'></i></a>
+          <a class="social-icon" href="#"><i class='bx bxl-linkedin'></i></a>
+          <a class="social-icon" href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a class="social-icon" href="#"><i class='bx bxl-instagram'></i></a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ----contact---- -->
-  <div id="contact">
-    <div class="container">
-      <div class="contact-row-1">
-        <h1>Contact Me</h1>
-        <p><i class='bx  bx-paper-plane'></i> sit24cs@sairamtap.edu.in</p>
-        <p><i class='bx  bx-user-circle'></i> 9876543210</p>
-        <div class="logo">
-          <i class='bx bxl-twitter' id="blogo"></i> 
-          <i class='bx  bxl-linkedin' id="blogo"></i> 
-          <i class='bx  bxl-facebook-circle' id="blogo"></i> 
-          <i class='bx bxl-instagram' id="blogo"></i> 
-        </div>
-      </div>
-      <div class="contact-row-2">
-        <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="submit">Submit</button>
-        </form>
+      <form class="contact-form" name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
         <span id="mess"></span>
-      </div>
+      </form>
     </div>
-  </div>
+  </section>
 
-
-
-
-  <script>
-    var taplinks=document.getElementsByClassName("tab-links");
-    var tapcontents=document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-      for(taplink of taplinks){
-          taplink.classList.remove("active-links");
-      }
-      for(tapcontent of tapcontents){
-          tapcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-links");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
-
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxO9YNGSkIUGj6Yh41XkRg4SI-rsfHa48ofbZUpOoA_sX0r_FQ5ZjdDI2OgCnMjxFyq/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const mess=document.getElementById("mess")
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          mess.innerHTML="Message Sent Successfully"
-          setTimeout(function(){
-            mess.innerHTML=""
-          },6000)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
+  <footer>
+    <p>© 2025 Aravinth T. Designed & Built with ♥ in Chennai.</p>
+  </footer>
 </body>
-
+<script src="script.js"></script>
 </html>
